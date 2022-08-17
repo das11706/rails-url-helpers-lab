@@ -9,10 +9,14 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
   end
 
+
   def activate_student
-    
-  
+    @student = Student.find(params[:id])
+    if @student
+    @student = !@student.active   
+    end
   end
+ 
 
   private
 

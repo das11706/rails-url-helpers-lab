@@ -3,6 +3,6 @@ Rails.application.routes.draw do
  
   resources :students, only: [:index, :show]
 
-  get '/activate/student', to: 'students#activate_student'
+  get '/students/:id/activate', to: 'students#activate_student', as: 'activate_student'
 
 end
